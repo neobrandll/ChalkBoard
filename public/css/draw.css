@@ -1,0 +1,112 @@
+.color{
+    width: 15px ;
+    height: 40px ;
+    flex: 1 1;
+    margin: 0 10px;
+ }
+
+#color1{ background-color:red }
+#color2{background-color: yellow }
+#color3{background-color:green}
+#color4{background-color: blue}
+#color5{background-color:pink}
+#color6{background-color:orange}
+#color7{background-color:brown}
+#color8{background-color:purple}
+
+#container-msg{
+    /* width: 50px; */
+    /* height: 100px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#msgs{
+    /* text-align: center; */
+    width: 90%;
+    /* padding: 0 15px 15px 15px; */
+    /* margin-bottom: 10px; */
+   height: 100px;
+   overflow: auto;
+}
+.sendmessages{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.sendmessages input{
+    flex: 2 1 70%;
+}
+.sendmessages span{
+    flex: 1 1 30%;
+}
+
+#listUsers{
+    width: 90%;
+    height: 120px;
+    overflow: auto;
+}
+
+
+/* ///////////////////////////////// */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+
+.row{
+    width: 100%;
+}
+
+
+
+/* Main-content Styles */
+.main-content{
+    padding: 50px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    min-height: 100vh;
+}
+.main-content > div{
+    margin: 0 10px;
+}
+.main-content #canvas-container{
+    width: 960px;
+    height: 690px;
+    flex: 2 1 70%;    
+    background-image: url("images/whiteboard.jpg");
+    background-size: 100% 100%;
+    cursor: url("images/pencil.png"), auto;
+
+}
+.main-content .sub-content{
+    flex: 1 1 30%;
+}
+.sub-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgba(0,0,0,.5);
+    
+}
+
+.colors{
+    width: 100% !important;
+    display: flex;
+    flex-direction: row !important;
+}
+/* .color{
+    min-width: 5%;
+} */

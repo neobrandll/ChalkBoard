@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChalkBoard</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="background-image" style="background-image: url(css/images/pizarra.jpg);"></div>
+    <div class=" main">
+            <h1>ChalkBoard</h1>
+            <!-- <div> -->
+                <div class="field">
+                    <label for="name">Choose your Name:</label>
+                    <input class="form-control" type="text" value="Anonymous" id="name">
+                </div>
+                <div class="field">
+                        <label for="room">Type the Room's Name:</label>
+                        <input class="form-control" type="text" value="public" id="room">
+                    </div>
+                <div class="field">
+                    <!-- <button id="sndbtn">A Jugar!</button> -->
+                    <button type="button" class="btn btn-primary" id="sndbtn">A Jugar!</button>
+                </div>
+            <!-- </div> -->
+                
+            
+        
+    <script>
+      document.getElementById("sndbtn").addEventListener("click", ()=>{
+        var name = document.getElementById("name").value
+        var room = document.getElementById("room").value
+        if(name!=""&&room!=""){
+            fetch("/godraw?name="+name+"&room="+room,{method: "GET"})
+            .then((res)=>{
+            localStorage.setItem("pasoPI", "true" );
+            window.location.replace("../draw.html") })
+          }else{
+            alert("Porfavor ingrese un usuario y sala")
+          }
+      })
+      
+    </script>
+</body>
+</html>

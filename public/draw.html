@@ -1,0 +1,85 @@
+<html>
+<head>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/draw.css">
+    <script src="/socket.io/socket.io.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script> -->
+  <!-- <script src="lib/p5.js"></script> -->
+  <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.min.js"></script>
+    <script src="lib/p5.sound.min.js"></script>
+  
+
+
+  <style>
+     
+  </style>
+  
+</head>
+<body onload="verifyUser();">
+  <section class="main-content">
+    <div id="canvas-container"></div>
+    <div class="sub-content">
+        <h2>Users</h2>
+        <div id="listUsers">
+
+          </div>
+          <div id="container-msg">
+              <div id="msgs">
+
+                
+              </div>
+              <div class="sendmessages">
+                <input class="form-control" type="text"  id="new-msg">        
+                 <button type="button" class="btn btn-light" id="sndmsg">SEND</button>
+              </div>
+                
+              </div>
+          <div class="btn btn-primary" id="eraseAll">Borrar todas las pizarras</div>
+          <div class="btn btn-danger" id="erase">Borrar tu pizarra</div>
+    </div>
+    
+  </section>
+  <section class="colores">
+      <div id="options">
+          <p>
+              
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Edit your pencil</button>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                  <div class="card card-body colors">
+                    <div class="color" id="color1"></div>
+                    <div class="color" id="color2"></div>
+                    <div class="color" id="color3"></div>
+                    <div class="color" id="color4"></div>
+                    <div class="color" id="color5"></div>
+                    <div class="color" id="color6"></div>
+                    <div class="color" id="color7"></div>
+                    <div class="color" id="color8"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                  <div class="card card-body">
+                    <h5>Choose the Stroke Weight</h5>
+                    <div id="thin" class="StrokeWeight">Thin</div>
+                    <div id="light" class="StrokeWeight">Light</div>
+                    <div id="medium" class="StrokeWeight">Medium</div>
+                    <div id="bold" class="StrokeWeight">Bold</div>
+                    <div id="extraBold" class="StrokeWeight">Extra Bold</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+</div>
+  </section>
+              
+        <script src="lib/jquery-3.3.1.slim.js"></script>
+        <script src="lib/bootstrap.bundle.min.js"></script>
+        <script src="js/draw.js"></script>
+</body>
+</html>
